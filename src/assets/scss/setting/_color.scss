@@ -1,0 +1,15 @@
+$accent: #ff5851;
+
+$dark: (
+    "1": #111,
+    "2": #101b20
+);
+
+$light: (
+    "1": #fff,
+    "2": #f8f8f8
+);
+
+.colorLight{
+    color: map-get($light,"light");
+}
