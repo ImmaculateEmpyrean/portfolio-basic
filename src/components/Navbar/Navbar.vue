@@ -40,7 +40,7 @@
                 <h2 class="menu-item-text" v-show="isDesktop">Contact</h2>
             </div>
 
-            <div class="hamburger-wrapper">
+            <div class="hamburger-wrapper" @click="hamburgerClicked">
                 <svg class="hamburger-icon" id="hamburger-menu" v-show="isMobile"
                     width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
                 >
@@ -49,7 +49,7 @@
             </div>
         </div>
         
-        <Menu />
+        <Menu ref="mainMenu"/>
 
     </nav>
 </template>
@@ -159,6 +159,10 @@ export default {
                 this.isDesktop = true;
             }
             else console.log('could not determine the device inside the checkDevice function of the Navbar component');
+        },
+
+        hamburgerClicked(){
+            this.$refs.mainMenu.$el.classList.toggle('hidden');
         }
     },
     mounted(){
