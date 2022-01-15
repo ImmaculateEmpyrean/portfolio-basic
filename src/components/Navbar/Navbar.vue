@@ -134,12 +134,6 @@ export default {
     components:{
         Menu
     },
-    props:{
-        menuButtonSelected:{
-            type: String,
-            default: "Home"
-        }
-    },
     data(){
         return{
             isMobile: true,
@@ -168,11 +162,10 @@ export default {
         },
 
         hamburgerClicked(){
-            this.refreshSelectedButton();
             this.$refs.mainMenu.$el.classList.toggle('hidden');
         },
 
-        refreshSelectedButton(){
+        selectButton(selectButton){
             let clearSelected = function(){
                 let allButtons = [
                     this.$el.querySelector('#home-nb'),
@@ -190,7 +183,7 @@ export default {
                     element.classList.remove('selected');
                 })
             }.bind(this)
-            if(this.menuButtonSelected === "home"){
+            if(selectButton === "home"){
                 clearSelected();
                 
                 let homeButtonNav = this.$el.querySelector('#home-nb');
@@ -199,7 +192,7 @@ export default {
                 let homeButtonMenu = this.$el.querySelector('#home-mb');
                 homeButtonMenu.classList.add('selected');
 
-            } else if(this.menuButtonSelected === "portfolio"){
+            } else if(selectButton === "portfolio"){
                 clearSelected();
                 
                 let portfolioButtonNav = this.$el.querySelector('#portfolio-nb');
@@ -208,7 +201,7 @@ export default {
                 let portfolioButtonMenu = this.$el.querySelector('#portfolio-mb');
                 portfolioButtonMenu.classList.add('selected');
 
-            }else if(this.menuButtonSelected === "hire"){
+            }else if(selectButton === "hire"){
                 clearSelected();
                 
                 let hireButtonNav = this.$el.querySelector('#hire-nb');
@@ -217,7 +210,7 @@ export default {
                 let hireButtonMenu = this.$el.querySelector('#hire-mb');
                 hireButtonMenu.classList.add('selected');
 
-            }else if(this.menuButtonSelected === "contact"){
+            }else if(selectButton === "contact"){
                 clearSelected();
                 
                 let contactButtonNav = this.$el.querySelector('#contact-nb');
@@ -232,7 +225,7 @@ export default {
         this.checkDevice();
         window.addEventListener("resize",this.checkDevice.bind(this));
 
-        this.refreshSelectedButton();
+        this.selectButton('contact')
     }
 }
 </script>

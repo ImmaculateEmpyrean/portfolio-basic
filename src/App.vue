@@ -1,6 +1,6 @@
 <template>
 <div class="app">
-    <Navbar :menuButtonSelected="menuButtonSelected" />
+    <Navbar />
     <div class="wrapper">
         <HomeSection />
     </div>
@@ -16,11 +16,6 @@ export default {
     components:{
         HomeSection,
         Navbar,
-    },
-    data(){
-        return{
-            menuButtonSelected: "home"
-        }
     },
     mounted(){
         console.log('app started')
