@@ -41,7 +41,7 @@
             </div>
 
             <div class="hamburger-wrapper" @click="hamburgerClicked">
-                <svg class="hamburger-icon" id="hamburger-menu" v-show="isMobile"
+                <svg class="hamburger-icon" id="hamburger-menu-icon" v-show="isMobile"
                     width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"
                 >
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M1.23077 0C0.904349 0 0.591298 0.187301 0.360484 0.520699C0.12967 0.854097 0 1.30628 0 1.77778C0 2.24927 0.12967 2.70146 0.360484 3.03486C0.591298 3.36825 0.904349 3.55556 1.23077 3.55556H30.7692C31.0957 3.55556 31.4087 3.36825 31.6395 3.03486C31.8703 2.70146 32 2.24927 32 1.77778C32 1.30628 31.8703 0.854097 31.6395 0.520699C31.4087 0.187301 31.0957 0 30.7692 0H1.23077ZM0 16C0 15.5285 0.12967 15.0763 0.360484 14.7429C0.591298 14.4095 0.904349 14.2222 1.23077 14.2222H30.7692C31.0957 14.2222 31.4087 14.4095 31.6395 14.7429C31.8703 15.0763 32 15.5285 32 16C32 16.4715 31.8703 16.9237 31.6395 17.2571C31.4087 17.5905 31.0957 17.7778 30.7692 17.7778H1.23077C0.904349 17.7778 0.591298 17.5905 0.360484 17.2571C0.12967 16.9237 0 16.4715 0 16V16ZM0 30.2222C0 29.7507 0.12967 29.2985 0.360484 28.9651C0.591298 28.6317 0.904349 28.4444 1.23077 28.4444H30.7692C31.0957 28.4444 31.4087 28.6317 31.6395 28.9651C31.8703 29.2985 32 29.7507 32 30.2222C32 30.6937 31.8703 31.1459 31.6395 31.4793C31.4087 31.8127 31.0957 32 30.7692 32H1.23077C0.904349 32 0.591298 31.8127 0.360484 31.4793C0.12967 31.1459 0 30.6937 0 30.2222V30.2222Z" />
@@ -219,13 +219,46 @@ export default {
                 let contactButtonMenu = this.$el.querySelector('#contact-mb');
                 contactButtonMenu.classList.add('selected');
             }
-        }
+        },
+
+        toDarkMode(){
+            let navBar = this.$el; //this is super dangerous and may break in the future easily
+            navBar.classList.add('dark-mode');
+
+            let iconBoxes = this.$el.querySelectorAll('.icon-box');
+            iconBoxes.forEach(function(element){
+                element.classList.add('dark-mode');
+            });
+
+            let hamburgerMenuIcon = document.getElementById('hamburger-menu-icon');
+            hamburgerMenuIcon.classList.add('dark-mode');
+
+            let hamburgerMenu = document.getElementById('hamburger-menu');
+            hamburgerMenu.classList.add('dark-mode');
+        },
+        toLightMode(){
+            let navBar = this.$el.querySelector('.nav-bar');
+            navBar.classList.remove('dark-mode');
+
+            let iconBoxes = this.$el.querySelectorAll('.icon-box');
+            iconBoxes.forEach(function(element){
+                element.classList.remove('dark-mode');
+            });
+
+            let hamburgerMenuIcon = document.getElementById('hamburger-menu-icon');
+            hamburgerMenuIcon.classList.remove('dark-mode');
+            
+            let hamburgerMenu = document.getElementById('hamburger-menu');
+            hamburgerMenu.classList.remove('dark-mode');
+        },
     },
     mounted(){
         this.checkDevice();
         window.addEventListener("resize",this.checkDevice.bind(this));
 
-        this.selectButton('contact')
+        this.selectButton('contact');
+
+        this.toDarkMode();
     }
 }
 </script>
