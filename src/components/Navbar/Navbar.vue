@@ -69,9 +69,9 @@
     justify-content: space-between;
     padding: 0 var(--spacing-large);
 
-    background-color: $primary-black;
+    background-color: $primary-white;
     &.dark-mode{
-        background-color: $primary-white;
+        background-color: $primary-black;
     }
 }
 
@@ -89,24 +89,24 @@
 
     cursor: pointer;
 
-    background-color: $primary-black;
-    fill: $primary-white;
-    color: $primary-white;
+    background-color: $primary-white;
+    fill: $primary-black;
+    color: $primary-black;
     &.selected{
-        background-color: $primary-white;
-        fill: map-get($accent,"light-mode");
-        color: $primary-black;
+        background-color: $primary-black;
+        fill: map-get($accent,"dark-mode");
+        color: $primary-white;
     }
 
     &.dark-mode{
-        background-color: $primary-white;
-        fill: $primary-black;
-        color: $primary-black;
+        background-color: $primary-black;
+        fill: $primary-white;
+        color: $primary-white;
 
         &.selected{
-            background-color: $primary-black;
-            fill: map-get($accent,"dark-mode");
-            color: $primary-white;
+            background-color: $primary-white;
+            fill: map-get($accent,"light-mode");
+            color: $primary-black;
         }
     }
 }
@@ -117,9 +117,9 @@
     align-items: center;
     justify-content: center;
     .hamburger-icon{
-        fill: $primary-white;
+        fill: $primary-black;
         &.dark-mode{
-            fill: $primary-black;
+            fill: $primary-white;
         }
     }
 }

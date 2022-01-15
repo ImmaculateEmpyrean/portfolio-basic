@@ -51,7 +51,12 @@ ul{
 
     position: fixed;
     height: calc(100vh - var(--nav-bar-height));
-    background: $primary-black;
+    
+    background: $primary-white;
+    &.dark-mode{
+        background: $primary-black;
+    }
+
     width: 50%;
     bottom: 0;
     right: 0;
@@ -65,26 +70,32 @@ ul{
 
 .icon-box{
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: center;
     column-gap: var(--spacing-large);
-    padding:  var(--spacing-large);
+    padding:  var(--spacing-large) 0;
+    width: 100%;
 
     cursor: pointer;
 
-    background-color: $primary-black;
-    fill: $primary-white;
-    color: $primary-white;
+    background-color: $primary-white;
+    fill: $primary-black;
+    color: $primary-black;
     &.selected{
-        fill: map-get($accent,"light-mode");
+        background-color: $primary-black;
+        fill: map-get($accent,"dark-mode");
+        color: $primary-white;
     }
 
     &.dark-mode{
-        background-color: $primary-white;
-        fill: $primary-black;
-        color: $primary-black;
+        background-color: $primary-black;
+        fill: $primary-white;
+        color: $primary-white;
 
         &.selected{
-            fill: map-get($accent,"dark-mode");
+            background-color: $primary-white;
+            fill: map-get($accent,"light-mode");
+            color: $primary-black;
         }
     }
 }
