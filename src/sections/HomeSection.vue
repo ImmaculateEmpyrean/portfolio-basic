@@ -14,7 +14,7 @@ export default {
 @use '@/assets/scss/setting' as *;
 
 .home-section{
-    border: 1px solid red;
+    // border: 1px solid red;
     min-height: calc(100vh - 75px);
 }
 </style>

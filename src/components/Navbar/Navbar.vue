@@ -49,7 +49,7 @@
             </div>
         </div>
         
-        <Menu ref="mainMenu"/>
+        <Menu ref="mainMenu" />
 
     </nav>
 </template>
@@ -134,6 +134,12 @@ export default {
     components:{
         Menu
     },
+    props:{
+        menuButtonSelected:{
+            type: String,
+            default: "Home"
+        }
+    },
     data(){
         return{
             isMobile: true,
@@ -162,12 +168,71 @@ export default {
         },
 
         hamburgerClicked(){
+            this.refreshSelectedButton();
             this.$refs.mainMenu.$el.classList.toggle('hidden');
+        },
+
+        refreshSelectedButton(){
+            let clearSelected = function(){
+                let allButtons = [
+                    this.$el.querySelector('#home-nb'),
+                    this.$el.querySelector('#portfolio-nb'),
+                    this.$el.querySelector('#hire-nb'),
+                    this.$el.querySelector('#contact-nb'),
+
+                    this.$el.querySelector('#home-mb'),
+                    this.$el.querySelector('#portfolio-mb'),
+                    this.$el.querySelector('#hire-mb'),
+                    this.$el.querySelector('#contact-mb'),
+                ]
+
+                allButtons.forEach(function(element){
+                    element.classList.remove('selected');
+                })
+            }.bind(this)
+            if(this.menuButtonSelected === "home"){
+                clearSelected();
+                
+                let homeButtonNav = this.$el.querySelector('#home-nb');
+                homeButtonNav.classList.add('selected');
+
+                let homeButtonMenu = this.$el.querySelector('#home-mb');
+                homeButtonMenu.classList.add('selected');
+
+            } else if(this.menuButtonSelected === "portfolio"){
+                clearSelected();
+                
+                let portfolioButtonNav = this.$el.querySelector('#portfolio-nb');
+                portfolioButtonNav.classList.add('selected');
+
+                let portfolioButtonMenu = this.$el.querySelector('#portfolio-mb');
+                portfolioButtonMenu.classList.add('selected');
+
+            }else if(this.menuButtonSelected === "hire"){
+                clearSelected();
+                
+                let hireButtonNav = this.$el.querySelector('#hire-nb');
+                hireButtonNav.classList.add('selected');
+
+                let hireButtonMenu = this.$el.querySelector('#hire-mb');
+                hireButtonMenu.classList.add('selected');
+
+            }else if(this.menuButtonSelected === "contact"){
+                clearSelected();
+                
+                let contactButtonNav = this.$el.querySelector('#contact-nb');
+                contactButtonNav.classList.add('selected');
+
+                let contactButtonMenu = this.$el.querySelector('#contact-mb');
+                contactButtonMenu.classList.add('selected');
+            }
         }
     },
     mounted(){
         this.checkDevice();
         window.addEventListener("resize",this.checkDevice.bind(this));
+
+        this.refreshSelectedButton();
     }
 }
 </script>
