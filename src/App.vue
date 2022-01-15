@@ -1,6 +1,10 @@
 <template>
+<div class="app">
     <nav-wrapper />
-    <HomeSection />
+    <div class="wrapper">
+        <HomeSection />
+    </div>
+</div>
 </template>
 
 <script>
@@ -19,4 +23,8 @@ export default {
 <style lang="scss">
 @use '@/assets/scss/setting' as *;
 
+.wrapper{
+    max-width: 1400px;
+    margin: 0 auto; 
+}
 </style>

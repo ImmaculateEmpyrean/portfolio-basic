@@ -10,5 +10,4 @@
 nav{
     height: navVar.$height;
 }
-
 </style>
