@@ -38,8 +38,6 @@
     font-weight: 900;
     font-size: var(--font-hero);
     line-height: 82%;
-
-    color: $primary-black;
 }
 
 .hero-sub-text{
@@ -50,8 +48,6 @@
     line-height: 82%;
     
     letter-spacing: 1.01em;
-
-    color: $primary-black;
 }
 
 .menu-item-text{
@@ -63,10 +59,4 @@
 
     letter-spacing: 0.1em;
     text-transform: capitalize;
-
-    color: $primary-black;
-}
-
-.dark-mode{
-    color: $primary-white;
 }

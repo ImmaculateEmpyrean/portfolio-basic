@@ -1,6 +1,6 @@
 <template>
 <div class="app">
-    <nav-wrapper />
+    <Navbar />
     <div class="wrapper">
         <HomeSection />
     </div>
@@ -9,13 +9,13 @@
 
 <script>
 import HomeSection from '@/sections/HomeSection.vue';
-import NavWrapper from '@/components/Navbar/NavWrapper.vue';
+import Navbar from '@/components/Navbar.vue';
 
 export default {
     name: 'App',
     components:{
         HomeSection,
-        NavWrapper,
+        Navbar,
     }
 }
 </script>
