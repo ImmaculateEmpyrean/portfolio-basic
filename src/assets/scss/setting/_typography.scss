@@ -4,10 +4,10 @@
 *{
     --font-small: 10px;
     --font-normal: 16px;
-    --font-large: 20px;
+    --font-large: 15px;
     // --font-larger: 24px;
 
-    --font-hero: 144px; //this is subject to change
+    --font-hero: 64px; //this is subject to change
 }
 
 @include for-tablet-portrait-up{
@@ -38,6 +38,12 @@
     font-weight: 900;
     font-size: var(--font-hero);
     line-height: 82%;
+    color: $primary-black;
+    &.dark-mode{
+        color: $primary-white;
+    }
+
+    text-transform: uppercase;
 }
 
 .hero-sub-text{
@@ -46,6 +52,11 @@
     font-weight: 300;
     font-size: var(--font-large);
     line-height: 82%;
+
+    color: $primary-black;
+    &.dark-mode{
+        color: $primary-white;
+    }
     
     letter-spacing: 1.01em;
 }

@@ -1,9 +1,10 @@
 <template>
 <div class="app">
     <Navbar />
-    <div class="wrapper">
-        <HomeSection />
-    </div>
+    <HomeSection />
+    <!-- <div class="wrapper">
+        
+    </div> -->
 </div>
 </template>
 
