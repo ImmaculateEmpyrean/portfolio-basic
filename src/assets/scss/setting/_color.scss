@@ -1,15 +1,7 @@
-$accent: #ff5851;
-
-$dark: (
-    "1": #111,
-    "2": #101b20
+$accent: (
+    "light-mode": #2D56E5,
+    "dark-mode": #5D74C5
 );
 
-$light: (
-    "1": #fff,
-    "2": #f8f8f8
-);
-
-.colorLight{
-    color: map-get($light,"light");
-}
+$primary-white: #DDD5D5;
+$primary-black: #262525;

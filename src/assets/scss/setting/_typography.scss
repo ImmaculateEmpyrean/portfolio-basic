@@ -5,24 +5,68 @@
     --font-small: 10px;
     --font-normal: 16px;
     --font-large: 20px;
-    
-    --font-larger: 24px;
+    // --font-larger: 24px;
+
+    --font-hero: 144px; //this is subject to change
 }
 
 @include for-tablet-portrait-up{
     *{
         --font-small: 12px;
-        --font-normal: 18px;
-        --font-large: 28px;
-        --font-larger: 32px;
+        --font-normal: 22px;
+        --font-large: 30px;
+        // --font-larger: 32px;
+
+        --font-hero: 144px; //this is subject to change
     }   
 }
 
 @include for-desktop-up{
     *{
         --font-small: 14px;
-        --font-normal: 20px;
-        --font-large: 28px;
-        --font-larger: 36px;
+        --font-normal: 24px;
+        --font-large: 32px;
+        // --font-larger: 36px;
+
+        --font-hero: 144px;
     }
+}
+
+.hero-text{
+    font-family: 'Titillium Web', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: var(--font-hero);
+    line-height: 82%;
+
+    color: $primary-black;
+}
+
+.hero-sub-text{
+    font-family: 'Nunito', sans-serif; 
+    font-style: normal;
+    font-weight: 300;
+    font-size: var(--font-large);
+    line-height: 82%;
+    
+    letter-spacing: 1.01em;
+
+    color: $primary-black;
+}
+
+.menu-item-text{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: var(--font-normal);
+    line-height: 82%;
+
+    letter-spacing: 0.1em;
+    text-transform: capitalize;
+
+    color: $primary-black;
+}
+
+.dark-mode{
+    color: $primary-white;
 }
