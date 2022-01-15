@@ -9,7 +9,7 @@
 
 <script>
 import HomeSection from '@/sections/HomeSection.vue';
-import Navbar from '@/components/Navbar.vue';
+import Navbar from '@/components/Navbar/Navbar.vue';
 
 export default {
     name: 'App',

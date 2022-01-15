@@ -49,6 +49,8 @@
             </div>
         </div>
         
+        <Menu />
+
     </nav>
 </template>
 
@@ -62,7 +64,7 @@
 @use '@/assets/scss/setting' as *;
 
 .nav-bar{
-    height: 75px;
+    height: var(--nav-bar-height);
     display: flex;
     justify-content: space-between;
     padding: 0 var(--spacing-large);
@@ -85,7 +87,6 @@
     column-gap: var(--spacing-small);
     padding: 0 var(--spacing-normal);
 
-    // border: 1px solid magenta;
     cursor: pointer;
 
     background-color: $primary-black;
@@ -125,10 +126,14 @@
 </style>
 
 <script>
+import Menu from '@/components/Navbar/Menu.vue';
 import {isMobile,isTablet,isDesktop} from '@/js/breakpoints.js';
 
 export default {
     name: "NavBar",
+    components:{
+        Menu
+    },
     data(){
         return{
             isMobile: true,
