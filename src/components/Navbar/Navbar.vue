@@ -256,7 +256,7 @@ export default {
         this.checkDevice();
         window.addEventListener("resize",this.checkDevice.bind(this));
 
-        this.selectButton('contact');
+        this.selectButton('home');
 
         this.toDarkMode();
     }
