@@ -60,6 +60,7 @@ ul{
     width: 50%;
     bottom: 0;
     right: 0;
+    z-index: 1;
 
     list-style: none;
 

@@ -5,8 +5,8 @@
         <h1 class="hero-text">Designer</h1>
         <h1 class="hero-text">Developer</h1>
 
-        <svg class="divider-line" height="5" viewBox="0 0 1452 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="1452" height="5" rx="2.5" fill="#2D56E6"/>
+        <svg class="divider-line" height="5" viewBox="0 0 90vw 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="90vw" height="5" rx="2.5" fill="#2D56E6"/>
         </svg>
 
 
