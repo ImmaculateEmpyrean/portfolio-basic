@@ -2,24 +2,98 @@
     <section class="portfolio-section">
         <div class="wrapper">
             <h1 class="hero-text dark-mode">Projects</h1>
-            <h2 class="menu-item-text dark-mode">A list of my most important projects for your viewing pleasure.</h2>
-            <a class="menu-item-text dark-mode" href="#">Click here for the full list</a>
-
+            <h2 class="menu-item-text caption large-margin-top">Given Below Is A Detailed List Of My Most Important Projects Undertaken Yet.</h2>
+    
             <div class="projects">
                 <ProjectCard 
                     style="grid-area: 'project-1'"
-                    title="Full Stack Shopping Website"
+                    title="E-Commerce Platform"
                     image="https://via.placeholder.com/150"
                     imageAlt="the placeholder image"
                     liveLink="#" srcLink="#"
-                />
+                >
+                    <template #projectDescription>
+                        <p class="bodyText">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et ipsum adipisci eum libero? Numquam dolorem officia doloribus itaque reiciendis dolores! Accusamus id necessitatibus ratione mollitia, ducimus porro sit veniam, sapiente nostrum rerum blanditiis illo quas molestias est non odit recusandae consectetur ad. Ratione eveniet in quasi nemo provident odit earum!</p>
+                    </template>
+                </ProjectCard>
+
+                <ProjectCard 
+                    style="grid-area: 'project-2'"
+                    title="E-Commerce Platform"
+                    image="https://via.placeholder.com/150"
+                    imageAlt="the placeholder image"
+                    liveLink="#" srcLink="#"
+                >
+                    <template #projectDescription>
+                        <p class="bodyText">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et ipsum adipisci eum libero? Numquam dolorem officia doloribus itaque reiciendis dolores! Accusamus id necessitatibus ratione mollitia, ducimus porro sit veniam, sapiente nostrum rerum blanditiis illo quas molestias est non odit recusandae consectetur ad. Ratione eveniet in quasi nemo provident odit earum!</p>
+                    </template>
+                </ProjectCard>
+
+                <ProjectCard 
+                    style="grid-area: 'project-3'"
+                    title="E-Commerce Platform"
+                    image="https://via.placeholder.com/150"
+                    imageAlt="the placeholder image"
+                    liveLink="#" srcLink="#"
+                >
+                    <template #projectDescription>
+                        <p class="bodyText">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et ipsum adipisci eum libero? Numquam dolorem officia doloribus itaque reiciendis dolores! Accusamus id necessitatibus ratione mollitia, ducimus porro sit veniam, sapiente nostrum rerum blanditiis illo quas molestias est non odit recusandae consectetur ad. Ratione eveniet in quasi nemo provident odit earum!</p>
+                    </template>
+                </ProjectCard>
+
+                <ProjectCard 
+                    style="grid-area: 'project-4'"
+                    title="E-Commerce Platform"
+                    image="https://via.placeholder.com/150"
+                    imageAlt="the placeholder image"
+                    liveLink="#" srcLink="#"
+                >
+                    <template #projectDescription>
+                        <p class="bodyText">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et ipsum adipisci eum libero? Numquam dolorem officia doloribus itaque reiciendis dolores! Accusamus id necessitatibus ratione mollitia, ducimus porro sit veniam, sapiente nostrum rerum blanditiis illo quas molestias est non odit recusandae consectetur ad. Ratione eveniet in quasi nemo provident odit earum!</p>
+                    </template>
+                </ProjectCard>
+
+                <ProjectCard 
+                    style="grid-area: 'project-5'"
+                    title="E-Commerce Platform"
+                    image="https://via.placeholder.com/150"
+                    imageAlt="the placeholder image"
+                    liveLink="#" srcLink="#"
+                >
+                    <template #projectDescription>
+                        <p class="bodyText">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et ipsum adipisci eum libero? Numquam dolorem officia doloribus itaque reiciendis dolores! Accusamus id necessitatibus ratione mollitia, ducimus porro sit veniam, sapiente nostrum rerum blanditiis illo quas molestias est non odit recusandae consectetur ad. Ratione eveniet in quasi nemo provident odit earum!</p>
+                    </template>
+                </ProjectCard>
+
+                <ProjectCard 
+                    style="grid-area: 'project-6'"
+                    title="E-Commerce Platform"
+                    image="https://via.placeholder.com/150"
+                    imageAlt="the placeholder image"
+                    liveLink="#" srcLink="#"
+                >
+                    <template #projectDescription>
+                        <p class="bodyText">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et ipsum adipisci eum libero? Numquam dolorem officia doloribus itaque reiciendis dolores! Accusamus id necessitatibus ratione mollitia, ducimus porro sit veniam, sapiente nostrum rerum blanditiis illo quas molestias est non odit recusandae consectetur ad. Ratione eveniet in quasi nemo provident odit earum!</p>
+                    </template>
+                </ProjectCard>
+
             </div>
         </div>
+
+         <div class="actions">
+                <a class="dashed-button menu-item-text" href="#">Download My Resume</a>
+                <a class="dashed-button menu-item-text" href="#">View More Projects</a>
+            </div>
     </section>
 </template>
 
 <style lang="scss" scoped>
 @use '@/assets/scss/setting' as *;
+
+.caption{
+    text-decoration: none;
+    color: $primary-white;
+}
 
 .portfolio-section{
     min-height: 100vh;
@@ -33,17 +107,29 @@
 .wrapper{
     max-width: 1400px;
     width: 100%;
+    padding: var(--spacing-normal);
 
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+
+    @include for-desktop-up{
+        align-items: flex-start;
+    }
     
     height: 100%;
 }
 .projects{
-    margin: 0 var(--spacing-normal);
+    margin-top: calc(var(--spacing-large) * 2);
+    margin-bottom: calc(var(--spacing-large) * 2);
+    @include for-desktop-up{
+        margin-top: var(--spacing-large);
+        margin-bottom: var(--spacing-large);
+    }
 
     display: grid;
+    gap: var(--spacing-large);
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
@@ -56,7 +142,7 @@
 
     @include for-tablet-portrait-up{
         grid-template-columns: 1fr 1fr;
-        grid-auto-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas: 
             "project-1 project-2",
             "project-3 project-4",
@@ -70,6 +156,48 @@
             "project-1 project-2 project-3",
             "project-4 project-5 project-6";
     }
+}
+
+.actions{
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--spacing-normal);
+    width: 100%;
+
+    @include for-tablet-portrait-up{
+        flex-direction: row;
+        height: calc(var(--spacing-large) * 3);
+    }
+
+    column-gap: var(--spacing-large);
+    a{
+        flex: 1 1 50%;
+
+        @include for-desktop-up{
+            border: 3px dashed $primary-black;   
+        }
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: $primary-black;
+        background-color: $primary-white;
+        text-decoration: none;
+    }
+}
+
+.hero-text{
+    margin-top: 15vh;
+    @include for-tablet-portrait-up{
+        margin-top: 25vh;
+    }
+    @include for-desktop-up{
+        margin-top: 45vh;
+    }
+}
+.large-margin-top{
+    margin-top: var(--spacing-large);
 }
 </style>
 

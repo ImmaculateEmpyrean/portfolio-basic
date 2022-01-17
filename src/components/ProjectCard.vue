@@ -1,18 +1,16 @@
 <template>
     <div class="project-card">
-        <h1 class="title-text center">{{title}}</h1>
+        <h1 class="bodyHeading">{{title}}</h1>
         <img :src="image" :alt="imageAlt">
         <slot name="projectDescription"/>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et ipsum adipisci eum libero? Numquam dolorem officia doloribus itaque reiciendis dolores! Accusamus id necessitatibus ratione mollitia, ducimus porro sit veniam, sapiente nostrum rerum blanditiis illo quas molestias est non odit recusandae consectetur ad. Ratione eveniet in quasi nemo provident odit earum!</p>
-
         <div class="buttons">
-            <a :href="liveLink" class="button">
+            <a :href="liveLink" class="button bodyText alternate">
                 <Icon>
                     <BranchFork24Regular />
                 </Icon>
                 Live Version
             </a>
-            <a :href="srcLink" class="button">
+            <a :href="srcLink" class="button bodyText alternate">
                 <Icon>
                     <OpenOutline />
                 </Icon>
@@ -25,15 +23,14 @@
 <style lang="scss" scoped>
 @use '@/assets/scss/setting' as *;
 
-.title-text{
-    font-family: sans-serif;
-    &.center{
-        text-align: center;
+h1{
+    text-align: center;
+    @include for-tablet-portrait-up{
+        text-align: left;
     }
 }
 
 .project-card{
-    margin: var(--spacing-large);
     padding: var(--spacing-normal);
     
     background-color: $primary-white;
@@ -79,8 +76,8 @@ img{
 
 <script>
 import { Icon } from '@vicons/utils'
-import { BranchFork24Regular } from '@vicons/fluent';
-import { OpenOutline } from '@vicons/ionicons5';
+import  BranchFork24Regular  from '@vicons/fluent/BranchFork24Regular';
+import  OpenOutline  from '@vicons/ionicons5/OpenOutline';
 
 export default {
     name: "Project Card",
