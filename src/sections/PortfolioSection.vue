@@ -1,7 +1,7 @@
 <template>
     <section class="portfolio-section">
         <div class="wrapper">
-            <h1 class="hero-text dark-mode">Projects</h1>
+            <h1 class="hero-text dark-mode section-heading">Projects</h1>
             <h2 class="menu-item-text caption large-margin-top">Given Below Is A Detailed List Of My Most Important Projects Undertaken Yet.</h2>
     
             <div class="projects">
@@ -80,10 +80,10 @@
             </div>
         </div>
 
-         <div class="actions">
-                <a class="dashed-button menu-item-text" href="#">Download My Resume</a>
-                <a class="dashed-button menu-item-text" href="#">View More Projects</a>
-            </div>
+        <div class="actions">
+            <a class="dashed-button menu-item-text" href="#">Download My Resume</a>
+            <a class="dashed-button menu-item-text" href="#">View More Projects</a>
+        </div>
     </section>
 </template>
 
@@ -117,8 +117,6 @@
     @include for-desktop-up{
         align-items: flex-start;
     }
-    
-    height: 100%;
 }
 .projects{
     margin-top: calc(var(--spacing-large) * 2);
@@ -161,8 +159,12 @@
 .actions{
     display: flex;
     flex-direction: column;
-    row-gap: var(--spacing-normal);
-    width: 100%;
+    margin: var(--spacing-large);
+    row-gap: calc(var(--spacing-large) * 2);
+    @include for-tablet-portrait-up{
+        margin: 0;
+        row-gap: 0;
+    }
 
     @include for-tablet-portrait-up{
         flex-direction: row;
@@ -172,10 +174,8 @@
     column-gap: var(--spacing-large);
     a{
         flex: 1 1 50%;
-
-        @include for-desktop-up{
-            border: 3px dashed $primary-black;   
-        }
+        
+        border: 3px dashed $primary-black;
 
         display: flex;
         justify-content: center;
@@ -187,13 +187,13 @@
     }
 }
 
-.hero-text{
+.section-heading{
     margin-top: 15vh;
     @include for-tablet-portrait-up{
         margin-top: 25vh;
     }
     @include for-desktop-up{
-        margin-top: 45vh;
+        margin-top: 35vh;
     }
 }
 .large-margin-top{
