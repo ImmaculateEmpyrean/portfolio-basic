@@ -34,7 +34,7 @@ h1{
     padding: var(--spacing-normal);
     
     background-color: $primary-white;
-    box-shadow: 0px 0px 4px 5px $primary-white;
+    border-radius: 5px;
 
     display: flex;
     flex-direction: column;
@@ -52,6 +52,7 @@ h1{
 
 img{
     width: 100%;
+    box-shadow: 0px 0px 2px 3px #aaa;
 }
 
 .buttons{
