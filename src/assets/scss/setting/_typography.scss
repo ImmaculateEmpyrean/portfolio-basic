@@ -71,7 +71,7 @@
 .bodyHeading{
     font-family: Roboto;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 100;
     
     font-size: var(--font-normal);
     line-height: calc(var(--font-normal) * 1.15); 
@@ -79,9 +79,9 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
 
-    color: $primary-black;
+    color: black;
     &.dark-mode{
-        color: $primary-white
+        color: white;
     }
 }
 
