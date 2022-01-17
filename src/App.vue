@@ -2,20 +2,21 @@
 <div class="app">
     <Navbar />
     <HomeSection />
-    <!-- <div class="wrapper">
-        
-    </div> -->
+    <PortfolioSection />
 </div>
 </template>
 
 <script>
 import HomeSection from '@/sections/HomeSection.vue';
+import PortfolioSection from '@/sections/PortfolioSection.vue';
+
 import Navbar from '@/components/Navbar/Navbar.vue';
 
 export default {
     name: 'App',
     components:{
         HomeSection,
+        PortfolioSection,
         Navbar,
     },
     mounted(){

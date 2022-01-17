@@ -64,6 +64,9 @@
 @use '@/assets/scss/setting' as *;
 
 .nav-bar{
+    position: sticky;
+    top: 0;
+
     height: var(--nav-bar-height);
     display: flex;
     justify-content: space-between;
@@ -73,6 +76,8 @@
     &.dark-mode{
         background-color: $primary-black;
     }
+
+    z-index: 1000;
 }
 
 .right{
