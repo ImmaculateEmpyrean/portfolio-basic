@@ -8,10 +8,10 @@
     <PortfolioSection />
     <SectionGap  class="dark-mode"/>
 
-    <SectionGap />
+    <!-- <SectionGap /> -->
     <HireMeSection />
-    <SectionGap />
-    
+    <!-- <SectionGap /> -->
+
 </div>
 </template>
 

@@ -104,6 +104,11 @@
     &.dark-mode{
         color: $primary-white
     }
+
+    max-width: 50ch;
+    &.align-center{
+        text-align: center;
+    }
 }
 
 .text-center{

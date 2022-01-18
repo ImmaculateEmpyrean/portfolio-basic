@@ -12,7 +12,7 @@
         height: 25vh;
     }
     @include for-desktop-up{
-        height: 35vh;
+        height: 30vh;
     }
 
     background-color: $primary-white;
