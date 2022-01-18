@@ -89,7 +89,7 @@
 
 <style lang="scss" scoped>
 @use '@/assets/scss/setting' as *;
-@import '@/sections/_sectionCommon.scss';
+@import '@/sections/_section.scss';
 
 .portfolio-section{
     min-height: 100vh;

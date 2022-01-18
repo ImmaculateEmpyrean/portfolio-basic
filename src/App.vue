@@ -1,9 +1,17 @@
 <template>
 <div class="app">
     <Navbar />
+
     <HomeSection />
+
+    <SectionGap  class="dark-mode"/>
     <PortfolioSection />
+    <SectionGap  class="dark-mode"/>
+
+    <SectionGap />
     <HireMeSection />
+    <SectionGap />
+    
 </div>
 </template>
 
@@ -11,6 +19,8 @@
 import HomeSection from '@/sections/HomeSection.vue';
 import PortfolioSection from '@/sections/PortfolioSection.vue';
 import HireMeSection from '@/sections/HireMe.vue';
+
+import SectionGap from '@/sections/SectionGap.vue';
 
 import Navbar from '@/components/Navbar/Navbar.vue';
 
@@ -21,6 +31,8 @@ export default {
         PortfolioSection,
         HireMeSection,
         Navbar,
+
+        SectionGap
     },
     mounted(){
         console.log('app started')

@@ -21,7 +21,7 @@
 
 <style lang="scss" scoped>
 @use '@/assets/scss/setting' as *;
-@import '@/sections/_sectionCommon.scss';
+@import '@/sections/_section.scss';
 
 .hire-me-section{
     background-color: $primary-black;

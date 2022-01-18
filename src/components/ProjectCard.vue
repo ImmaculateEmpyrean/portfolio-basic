@@ -52,7 +52,6 @@ h1{
 
 img{
     width: 100%;
-    box-shadow: 0px 0px 2px 3px #aaa;
 }
 
 .buttons{
