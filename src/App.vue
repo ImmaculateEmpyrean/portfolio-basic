@@ -6,9 +6,9 @@
 
     <SectionGap  class="dark-mode"/>
     <PortfolioSection />
-    <SectionGap  class="dark-mode"/>
+    <!-- <SectionGap  class="dark-mode"/> -->
 
-    <!-- <SectionGap /> -->
+    <SectionGap />
     <HireMeSection />
     <!-- <SectionGap /> -->
 
