@@ -26,7 +26,7 @@
 .hire-me-section{
     background-color: $primary-black;
     min-height: 100vh;
-}
+} 
 
 .three-way-grid{
     display: grid;
