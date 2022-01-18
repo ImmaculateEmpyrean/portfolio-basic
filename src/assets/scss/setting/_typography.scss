@@ -71,17 +71,18 @@
 .bodyHeading{
     font-family: Roboto;
     font-style: normal;
-    font-weight: 100;
+    font-weight: 400;
     
     font-size: var(--font-normal);
     line-height: calc(var(--font-normal) * 1.15); 
 
     letter-spacing: 0.05em;
     text-transform: uppercase;
+    text-align: center;
 
-    color: black;
+    color: $primary-black;
     &.dark-mode{
-        color: white;
+        color: $primary-white;
     }
 }
 
@@ -100,7 +101,6 @@
     letter-spacing: 0.1em;
 
     color: $primary-black;
-
     &.dark-mode{
         color: $primary-white
     }
@@ -108,4 +108,8 @@
 
 .text-center{
     text-align: center;
+}
+
+.large-margin-top{
+    margin-top: var(--spacing-large);
 }

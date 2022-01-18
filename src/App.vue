@@ -3,12 +3,14 @@
     <Navbar />
     <HomeSection />
     <PortfolioSection />
+    <HireMeSection />
 </div>
 </template>
 
 <script>
 import HomeSection from '@/sections/HomeSection.vue';
 import PortfolioSection from '@/sections/PortfolioSection.vue';
+import HireMeSection from '@/sections/HireMe.vue';
 
 import Navbar from '@/components/Navbar/Navbar.vue';
 
@@ -17,6 +19,7 @@ export default {
     components:{
         HomeSection,
         PortfolioSection,
+        HireMeSection,
         Navbar,
     },
     mounted(){

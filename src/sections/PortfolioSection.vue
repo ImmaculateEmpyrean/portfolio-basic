@@ -89,11 +89,7 @@
 
 <style lang="scss" scoped>
 @use '@/assets/scss/setting' as *;
-
-.caption{
-    text-decoration: none;
-    color: $primary-white;
-}
+@import '@/sections/_sectionCommon.scss';
 
 .portfolio-section{
     min-height: 100vh;
@@ -104,20 +100,7 @@
     flex-direction: column;
     justify-content: center;
 }
-.wrapper{
-    max-width: 1400px;
-    width: 100%;
-    padding: var(--spacing-normal);
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    @include for-desktop-up{
-        align-items: flex-start;
-    }
-}
 .projects{
     margin-top: calc(var(--spacing-large) * 2);
     margin-bottom: calc(var(--spacing-large) * 2);
@@ -185,19 +168,6 @@
         background-color: $primary-white;
         text-decoration: none;
     }
-}
-
-.section-heading{
-    margin-top: 15vh;
-    @include for-tablet-portrait-up{
-        margin-top: 25vh;
-    }
-    @include for-desktop-up{
-        margin-top: 35vh;
-    }
-}
-.large-margin-top{
-    margin-top: var(--spacing-large);
 }
 </style>
 
